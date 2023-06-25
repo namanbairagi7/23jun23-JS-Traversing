@@ -3,15 +3,98 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <script>
+        <title>JS Taversing</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+       <style>
+
+       </style>
+       <script>
 
         </script>
     </head>
     <body>
+        <table class="table w-50 offset-3 mt-5">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Students Name</th>
+                    <th>Student Surename</th>
+                    <th>Action</th>
+                </tr>
+                
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Abhishek</td>
+                    <td>Bairagi</td>
+                    <td>
+                        <button class="btn btn-success" onclick=" nmn(this)">View</button>
+                        <button class="btn btn-primary">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                 </tr>
+                <tr>
+                   <td>2</td>
+                   <td>Karan</td>
+                   <td>Verma</td>
+                   <td>
+                        <button class="btn btn-success n_vuiewbtn">View</button>
+                        <button class="btn btn-primary">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                   </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Naman</td>
+                    <td>Bairagi</td>
+                    <td>
+                        <button class="btn btn-success" onclick=" nmn(this) ">View</button>
+                        <button class="btn btn-primary">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                 </tr>
+                 <tr>
+                    <td>4</td>
+                    <td>Toshif</td>
+                    <td>Khan</td>
+                    <td>
+                        <button class="btn btn-success" onclick=" nmn(this) ">View</button>
+                        <button class="btn btn-primary">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                 </tr>
+                 <tr>
+                    <td>5</td>
+                    <td>Namit</td>
+                    <td>Agrawal</td>
+                    <td>
+                        <button class="btn btn-success" onclick=" nmn(this) ">View</button>
+                        <button class="btn btn-primary">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                 </tr>
+            </tbody>
+        </table>
+
+
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
         <script>
 
-            
+            let nmn = (e)=>{
+                console.log(e.closest('tr').querySelector('td:nth-child(2)').innerHtML);
+               // console.log('ok',e.closest('tr').querySelector('td:nth-child(2)').innerHtML);
+                
+            }
+
+            //element.addEventListener(event, function, useCapture);
+
+            //element = document.querySelecter (selecter)
+            console.log(document.querySelector('button.a_viewbtn'))
+            document.querySelector('.n_vuiewbtn').addEventListener('click',(e)=>{//e is a formal argument
+                console.log('',e.targat.closest('tr').querySelector('td:nth-child(2)').innerHtML);
+                //object.member
+            })
         </script>
     </body>
 </html>
